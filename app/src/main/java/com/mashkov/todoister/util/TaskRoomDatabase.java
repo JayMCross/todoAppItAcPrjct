@@ -21,7 +21,7 @@ import java.util.concurrent.Executors;
 @Database(entities = {Task.class}, version = 1, exportSchema = false)
 @TypeConverters({Converter.class})
 public abstract class TaskRoomDatabase extends RoomDatabase {
-    public static final int  NUMBER_OF_THREADS = 4;
+    public static final int NUMBER_OF_THREADS = 4;
     public static final String DATASE_NAME = "todoister_database";
     private static volatile TaskRoomDatabase INSTANCE;
     public static final ExecutorService databaseWriterExecutor
@@ -41,7 +41,7 @@ public abstract class TaskRoomDatabase extends RoomDatabase {
                 }
             };
 
-    public static TaskRoomDatabase getDatabase(final Context context){
+    public static TaskRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (TaskRoomDatabase.class) {
                 if (INSTANCE == null) {
@@ -54,5 +54,6 @@ public abstract class TaskRoomDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
     public abstract TaskDao taskDao();
 }

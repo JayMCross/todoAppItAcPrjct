@@ -12,9 +12,11 @@ public class SharedViewModel extends ViewModel {
     public void selectedItem(Task task) {
         selectedItem.setValue(task);
     }
-    public LiveData<Task> getSelectedItem(){
+
+    public LiveData<Task> getSelectedItem() {
         return selectedItem;
     }
+
     public void setIsEdit(boolean isEdit) {
         this.isEdit = isEdit;
     }

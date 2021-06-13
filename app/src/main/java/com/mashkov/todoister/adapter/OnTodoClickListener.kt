@@ -1,8 +1,8 @@
-package com.mashkov.todoister.adapter;
+package com.mashkov.todoister.adapter
 
-import com.mashkov.todoister.model.Task;
+import com.mashkov.todoister.model.Task
 
-public interface OnTodoClickListener {
-    void onTodoClick(Task task);
-    void onTodoRadioButtonClick(Task task);
+interface OnTodoClickListener {
+    fun onTodoClick(task: Task?)
+    fun onTodoRadioButtonClick(task: Task?)
 }

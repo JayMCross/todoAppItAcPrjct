@@ -1,40 +1,32 @@
-package com.mashkov.todoister.data;
+package com.mashkov.todoister.data
 
+import android.app.Application
+import androidx.lifecycle.LiveData
+import com.mashkov.todoister.model.Task
+import com.mashkov.todoister.util.TaskRoomDatabase
 
-import android.app.Application;
-
-import androidx.lifecycle.LiveData;
-
-import com.mashkov.todoister.model.Task;
-import com.mashkov.todoister.util.TaskRoomDatabase;
-
-import java.util.List;
-
-public class DoisterRepository {
-    private final TaskDao taskDao;
-    private final LiveData<List<Task>> allTasks;
-
-    public DoisterRepository(Application application) {
-        TaskRoomDatabase database = TaskRoomDatabase.getDatabase(application);
-        taskDao = database.taskDao(); // don't need 'this.'
-        allTasks = taskDao.getTasks();
+class DoisterRepository(application: Application?) {
+    private val taskDao: TaskDao
+    val allTasks: LiveData<List<Task>>
+    fun insert(task: Task?) {
+        TaskRoomDatabase.databaseWriterExecutor.execute { taskDao.insertTask(task) }
     }
 
-    public LiveData<List<Task>> getAllTasks() {
-        return allTasks;
+    operator fun get(id: Long): LiveData<Task> {
+        return taskDao[id]
     }
 
-    public void insert(Task task) {
-        TaskRoomDatabase.databaseWriterExecutor.execute( () -> taskDao.insertTask(task));
+    fun update(task: Task?) {
+        TaskRoomDatabase.databaseWriterExecutor.execute { taskDao.update(task) }
     }
 
-    public LiveData<Task> get(long id) { return taskDao.get(id); }
-
-    public void update(Task task) {
-        TaskRoomDatabase.databaseWriterExecutor.execute(() -> taskDao.update(task));
+    fun delete(task: Task?) {
+        TaskRoomDatabase.databaseWriterExecutor.execute { taskDao.delete(task) }
     }
 
-    public void delete(Task task) {
-        TaskRoomDatabase.databaseWriterExecutor.execute(() -> taskDao.delete(task));
+    init {
+        val database = TaskRoomDatabase.getDatabase(application)
+        taskDao = database.taskDao() // don't need 'this.'
+        allTasks = taskDao.tasks
     }
 }

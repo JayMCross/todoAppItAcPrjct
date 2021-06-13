@@ -1,7 +1,5 @@
-package com.mashkov.todoister.model;
+package com.mashkov.todoister.model
 
-public enum Priority {
-    HIGH,
-    MEDIUM,
-    LOW
+enum class Priority {
+    HIGH, MEDIUM, LOW
 }

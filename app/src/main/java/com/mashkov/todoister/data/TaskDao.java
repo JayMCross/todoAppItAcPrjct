@@ -15,7 +15,7 @@ import java.util.List;
 public interface TaskDao {
 
     @Insert
-    void  insertTask(Task task);
+    void insertTask(Task task);
 
     @Query("DELETE FROM task_table")
     void deleteAll();

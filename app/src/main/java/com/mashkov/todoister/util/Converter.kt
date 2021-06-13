@@ -1,28 +1,31 @@
-package com.mashkov.todoister.util;
+package com.mashkov.todoister.util
 
-import androidx.room.TypeConverter;
+import androidx.room.TypeConverter
+import com.mashkov.todoister.model.Priority
+import java.util.*
 
-import com.mashkov.todoister.model.Priority;
-
-import java.util.Date;
-
-public class Converter {
-
+object Converter {
+    @JvmStatic
     @TypeConverter
-    public static Date fromTimestamp(Long value) {
-        return value == null ? null : new Date(value);
-    }
-    @TypeConverter
-    public static Long dateToTimestamp(Date date) {
-        return date == null ? null : date.getTime();
+    fun fromTimestamp(value: Long?): Date? {
+        return if (value == null) null else Date(value)
     }
 
+    @JvmStatic
     @TypeConverter
-    public static String fromPriority(Priority priority) {
-        return priority == null ? null : priority.name();
+    fun dateToTimestamp(date: Date?): Long? {
+        return date?.time
     }
+
+    @JvmStatic
     @TypeConverter
-    public static Priority toPriority(String priority) {
-        return priority == null ? null : Priority.valueOf(priority);
+    fun fromPriority(priority: Priority?): String? {
+        return priority?.name
+    }
+
+    @JvmStatic
+    @TypeConverter
+    fun toPriority(priority: String?): Priority? {
+        return if (priority == null) null else Priority.valueOf(priority)
     }
 }
