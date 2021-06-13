@@ -1,4 +1,4 @@
-package com.mashkov.todoApp
+package com.mashkov.todoApp.activity
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.snackbar.Snackbar
+import com.mashkov.todoApp.R
 import com.mashkov.todoApp.model.Priority
 import com.mashkov.todoApp.model.SharedViewModel
 import com.mashkov.todoApp.model.Task

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TodoApp">
         <activity
-            android:name="com.mashkov.todoApp.MainActivity"
+            android:name="com.mashkov.todoApp.activity.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.TodoApp.NoActionBar">
             <intent-filter>
@@ -20,12 +20,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.mashkov.todoApp.AboutActivity"
+            android:name="com.mashkov.todoApp.activity.AboutActivity"
             android:label="@string/action_settings"
-            android:parentActivityName="com.mashkov.todoApp.MainActivity"/>
+            android:parentActivityName="com.mashkov.todoApp.activity.MainActivity"/>
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.mashkov.todoApp.MainActivity" />
+            android:value="com.mashkov.todoApp.activity.MainActivity" />
     </application>
 
 </manifest>

@@ -1,7 +1,8 @@
-package com.mashkov.todoApp
+package com.mashkov.todoApp.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.mashkov.todoApp.R
 
 class AboutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.mashkov.todoApp
+package com.mashkov.todoApp.activity
 
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.mashkov.todoApp.R
 import com.mashkov.todoApp.adapter.OnTodoClickListener
 import com.mashkov.todoApp.adapter.RecyclerViewAdapter
 import com.mashkov.todoApp.model.SharedViewModel
