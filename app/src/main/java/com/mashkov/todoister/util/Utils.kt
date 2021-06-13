@@ -28,9 +28,9 @@ object Utils {
         color = if (task.getPriority() === Priority.HIGH) {
             Color.argb(200, 201, 21, 23)
         } else if (task.getPriority() === Priority.MEDIUM) {
-            Color.argb(200, 155, 179, 0)
+            Color.argb(200, 225, 204, 50)
         } else {
-            Color.argb(200, 51, 181, 129)
+            Color.argb(200, 20, 181, 190)
         }
         return color
     }
