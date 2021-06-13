@@ -1,4 +1,4 @@
-package com.mashkov.todoister.model;
+package com.mashkov.todoApp.model;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

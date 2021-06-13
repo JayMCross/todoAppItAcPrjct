@@ -1,7 +1,7 @@
-package com.mashkov.todoister.util
+package com.mashkov.todoApp.util
 
 import androidx.room.TypeConverter
-import com.mashkov.todoister.model.Priority
+import com.mashkov.todoApp.model.Priority
 import java.util.*
 
 object Converter {

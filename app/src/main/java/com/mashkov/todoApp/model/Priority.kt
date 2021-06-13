@@ -1,4 +1,4 @@
-package com.mashkov.todoister.model
+package com.mashkov.todoApp.model
 
 enum class Priority {
     HIGH, MEDIUM, LOW

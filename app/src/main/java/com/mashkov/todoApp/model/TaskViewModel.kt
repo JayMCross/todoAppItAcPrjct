@@ -1,9 +1,9 @@
-package com.mashkov.todoister.model
+package com.mashkov.todoApp.model
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import com.mashkov.todoister.data.DoisterRepository
+import com.mashkov.todoApp.data.DoisterRepository
 
 class TaskViewModel(application: Application) : AndroidViewModel(application) {
     val allTasks: LiveData<List<Task>>

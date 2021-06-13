@@ -1,4 +1,4 @@
-package com.mashkov.todoister.adapter
+package com.mashkov.todoApp.adapter
 
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -9,9 +9,9 @@ import androidx.appcompat.widget.AppCompatRadioButton
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.chip.Chip
-import com.mashkov.todoister.R
-import com.mashkov.todoister.model.Task
-import com.mashkov.todoister.util.Utils
+import com.mashkov.todoApp.R
+import com.mashkov.todoApp.model.Task
+import com.mashkov.todoApp.util.Utils
 
 class RecyclerViewAdapter(private val taskList: List<Task>, private val todoClickListener: OnTodoClickListener) : RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

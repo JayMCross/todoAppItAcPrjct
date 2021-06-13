@@ -1,7 +1,5 @@
-package com.mashkov.todoister
+package com.mashkov.todoApp
 
-import android.content.ClipData
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -16,12 +14,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.mashkov.todoister.adapter.OnTodoClickListener
-import com.mashkov.todoister.adapter.RecyclerViewAdapter
-import com.mashkov.todoister.model.SharedViewModel
-import com.mashkov.todoister.model.Task
-import com.mashkov.todoister.model.TaskViewModel
-import com.mashkov.todoister.model.TaskViewModel.Companion.delete
+import com.mashkov.todoApp.adapter.OnTodoClickListener
+import com.mashkov.todoApp.adapter.RecyclerViewAdapter
+import com.mashkov.todoApp.model.SharedViewModel
+import com.mashkov.todoApp.model.Task
+import com.mashkov.todoApp.model.TaskViewModel
+import com.mashkov.todoApp.model.TaskViewModel.Companion.delete
 
 class MainActivity : AppCompatActivity(), OnTodoClickListener {
     private var taskViewModel: TaskViewModel? = null
@@ -54,10 +52,6 @@ class MainActivity : AppCompatActivity(), OnTodoClickListener {
         })
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener { view: View? ->
-            //Task task = new Task("Task" + counter++, Priority.MEDIUM, Calendar.getInstance().getTime(),
-            //        Calendar.getInstance().getTime(), false);
-
-            //taskViewModel.insert(task);
             showBottomSheetDialog()
         }
     }
@@ -67,15 +61,12 @@ class MainActivity : AppCompatActivity(), OnTodoClickListener {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        // Inflate the menu; adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         val id = item.itemId
         return if (id == R.id.action_settings) {
             true

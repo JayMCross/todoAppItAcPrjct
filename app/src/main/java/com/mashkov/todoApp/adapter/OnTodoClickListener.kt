@@ -1,6 +1,6 @@
-package com.mashkov.todoister.adapter
+package com.mashkov.todoApp.adapter
 
-import com.mashkov.todoister.model.Task
+import com.mashkov.todoApp.model.Task
 
 interface OnTodoClickListener {
     fun onTodoClick(task: Task?)

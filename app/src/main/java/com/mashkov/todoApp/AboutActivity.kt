@@ -1,4 +1,4 @@
-package com.mashkov.todoister
+package com.mashkov.todoApp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

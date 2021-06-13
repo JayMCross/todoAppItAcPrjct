@@ -1,4 +1,4 @@
-package com.mashkov.todoister;
+package com.mashkov.todoApp;
 
 import org.junit.Test;
 

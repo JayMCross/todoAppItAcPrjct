@@ -1,4 +1,4 @@
-package com.mashkov.todoister.data;
+package com.mashkov.todoApp.data;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.mashkov.todoister.model.Task;
+import com.mashkov.todoApp.model.Task;
 
 import java.util.List;
 

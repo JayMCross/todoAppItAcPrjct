@@ -1,11 +1,11 @@
-package com.mashkov.todoister.util
+package com.mashkov.todoApp.util
 
 import android.content.Context
 import android.graphics.Color
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import com.mashkov.todoister.model.Priority
-import com.mashkov.todoister.model.Task
+import com.mashkov.todoApp.model.Priority
+import com.mashkov.todoApp.model.Task
 import java.text.SimpleDateFormat
 import java.util.*
 

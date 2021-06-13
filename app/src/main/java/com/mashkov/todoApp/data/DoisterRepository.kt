@@ -1,9 +1,9 @@
-package com.mashkov.todoister.data
+package com.mashkov.todoApp.data
 
 import android.app.Application
 import androidx.lifecycle.LiveData
-import com.mashkov.todoister.model.Task
-import com.mashkov.todoister.util.TaskRoomDatabase
+import com.mashkov.todoApp.model.Task
+import com.mashkov.todoApp.util.TaskRoomDatabase
 
 class DoisterRepository(application: Application?) {
     private val taskDao: TaskDao

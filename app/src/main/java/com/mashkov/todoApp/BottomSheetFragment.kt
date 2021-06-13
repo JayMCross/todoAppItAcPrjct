@@ -1,4 +1,4 @@
-package com.mashkov.todoister
+package com.mashkov.todoApp
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -12,12 +12,12 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.snackbar.Snackbar
-import com.mashkov.todoister.model.Priority
-import com.mashkov.todoister.model.SharedViewModel
-import com.mashkov.todoister.model.Task
-import com.mashkov.todoister.model.TaskViewModel.Companion.insert
-import com.mashkov.todoister.model.TaskViewModel.Companion.update
-import com.mashkov.todoister.util.Utils.hideSoftKeyboard
+import com.mashkov.todoApp.model.Priority
+import com.mashkov.todoApp.model.SharedViewModel
+import com.mashkov.todoApp.model.Task
+import com.mashkov.todoApp.model.TaskViewModel.Companion.insert
+import com.mashkov.todoApp.model.TaskViewModel.Companion.update
+import com.mashkov.todoApp.util.Utils.hideSoftKeyboard
 import java.util.*
 
 class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {

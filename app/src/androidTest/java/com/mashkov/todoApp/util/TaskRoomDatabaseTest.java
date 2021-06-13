@@ -1,4 +1,4 @@
-package com.mashkov.todoister.util;
+package com.mashkov.todoApp.util;
 
 import junit.framework.TestCase;
 

@@ -1,18 +1,16 @@
-package com.mashkov.todoister.util;
+package com.mashkov.todoApp.util;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
-import androidx.room.Insert;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.TypeConverter;
 import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.mashkov.todoister.data.TaskDao;
-import com.mashkov.todoister.model.Task;
+import com.mashkov.todoApp.data.TaskDao;
+import com.mashkov.todoApp.model.Task;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
